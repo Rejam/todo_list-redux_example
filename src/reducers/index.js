@@ -1,8 +1,6 @@
 import {
   ADD_TODO,
   TOGGLE_TODO,
-  SET_VISIBILITY_FILTER,
-  VisibilityFilters
 } from '../actions'
 
 export function todos(state = [], action) {
@@ -22,15 +20,6 @@ export function todos(state = [], action) {
         }
         return todo
       })
-    default:
-      return state
-  }
-}
-
-export function visibilityFilter(state = VisibilityFilters.SHOW_ALL, action) {
-  switch(action.type) {
-    case SET_VISIBILITY_FILTER:
-      return action.filter
     default:
       return state
   }
